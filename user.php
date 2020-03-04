@@ -17,7 +17,7 @@ if(!isset($_SESSION[staffno])){
  	<header>
  		<div class="appname"> Salary Management System</div>
  		<div class="loggedin"> Welcome <?php echo $_SESSION['username'];?>! <a href="logout.php">Log Out</a></div>
- 		 <img src="pic 08.png" class="salary" height="400" width="400" top>
+ 		 <img src="img/pic 08.png" class="salary" height="400" width="400" top>
  		 <div class="salarybox">	
           <form action="http://localhost/ssms/newuser.php">
 		<input type="Submit" name="" value="New user Registion " style="margin: 100px"></input>	

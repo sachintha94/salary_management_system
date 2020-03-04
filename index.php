@@ -96,7 +96,7 @@ if (!isset($_POST['password'] ) || strlen(trim($_POST['password'])) < 1){
 				
 			</form>
 	
-		<img src="pic 06.png" class="fog">
+		<img src="img/pic 06.png" class="fog">
 		</form>
 	 </div> <!-- .login--> 
 
