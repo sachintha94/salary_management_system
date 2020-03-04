@@ -1,0 +1,14 @@
+body{
+	background: #030303;
+	font-weight: bold;}
+
+}
+header .appname{
+	float: left;
+	font-size: 50px;
+
+}
+header .loggedin{
+	float: right;
+	font-size: 13px;
+}
