@@ -122,16 +122,18 @@ body.user{
 	font-weight: bold;
     font-size:40px;
     padding: 10px;
-    background:#f6f6f6; }
-
+	background:#f6f6f6; 
 }
+
+
+
 body header.appname{
 	float: left;
 	font-size: 50px;
 
 }
 body header .loggedin{
-	float: right;
+	/*float: right;*/
 	font-size: 20px;
     top: 5%;
 }
@@ -216,4 +218,35 @@ h1{
     cursor: pointer;
     background: #ffc107;
     color: #000;
+}
+
+.btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+  margin-top: 5em;
+}
+
+.btn-group button a {
+
+	color: white; /* White text */
+	padding: 10px 24px; /* Some padding */
+	cursor: pointer; /* Pointer/hand icon */
+	font-size: 1.5em;
+	text-decoration: none;
+	
+	
+  }
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
 }

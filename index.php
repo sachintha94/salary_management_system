@@ -21,37 +21,32 @@ if (!isset($_POST['password'] ) || strlen(trim($_POST['password'])) < 1){
   if(empty($errors)) {
 
   	    //save username and passwod into variables
-  	      $username = mysqli_real_escape_string($connection, $_POST['username']);
-  	      $password = mysqli_real_escape_string($connection, $_POST['password']);
-  	      /*$password = sha1($password);*/
+  	    $username = mysqli_real_escape_string($connection, $_POST['username']);
+  	    $password = mysqli_real_escape_string($connection, $_POST['password']);
+  	  
+		$query = "SELECT * FROM LOGIN WHERE u_name = '$username' AND password = '$password'";
+	
+  	
+		$result_set = mysqli_query($connection, $query);
+			
+  	    if ($result_set){	
+			
 
-		//prepare database query
-  	      $query = "SELECT * FROM login 
-  	      WHERE usernsme = '{$_POST['username']}' 
-  	      AND password = '{$_POST['password']}'
-  	      LIMIT 1";
-
-  	      echo $query;
-
-  	      $result_set = mysqli_query($connection, $query);
-  	      if ($result_set){	
-  	      	
-
-  	     //query succesful
-  	      	if (mysqli_num_rows($result_set) ==1){
-  	     //valid user found
+  	    	//query succesful
+  	      	if (mysqli_num_rows($result_set) == 1){
+  	     	//valid user found
   	      		$user = mysqli_fetch_assoc($result_set);
   	      		$_SESSION['staffno'] = $user[staff_no];
   	      		$_SESSION['username'] = $user[u_name];
 
-  	     //redirect to user.php	
+  	     		//redirect to user.php	
   	      		header('Location:user.php');
   	      	}else{
-  	     //user name and password invalid 	
+  	     		//user name and password invalid 	
   	      		$errors[] = 'Invalid username / password';}
-          } else{
+        } else{
           	$errors[] = 'Database query failed'; 
-          }
+        }
       }
 	}	
 ?>
@@ -76,13 +71,9 @@ if (!isset($_POST['password'] ) || strlen(trim($_POST['password'])) < 1){
 		
 		<div class="loginbox">
 
-			
-			
-			<img src="pic03.png" class="avatar">
+			<img src="img/pic03.png" class="avatar">
 			<h1>Login Here</h1>
             
-             
-		
 			<form>
 				<p>Username </p>
 				<input type="text" id="Username" name="username" placeholder="Enter Username">

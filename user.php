@@ -2,7 +2,7 @@
 <?php require('inc/connection.php');?>
 <?php
 //checking if a user is logged in
-if(!isset($_SESSION[staffno])){
+if(!isset($_SESSION['staffno'])){
 	header('location:index.php');
 }
 ?>
@@ -16,21 +16,19 @@ if(!isset($_SESSION[staffno])){
  <body class="user">
  	<header>
  		<div class="appname"> Salary Management System</div>
- 		<div class="loggedin"> Welcome <?php echo $_SESSION['username'];?>! <a href="logout.php">Log Out</a></div>
- 		 <img src="img/pic 08.png" class="salary" height="400" width="400" top>
- 		 <div class="salarybox">	
-          <form action="http://localhost/ssms/newuser.php">
-		<input type="Submit" name="" value="New user Registion " style="margin: 100px"></input>	
-		</form>
 
-		<input type="Submit" name="" value="View salary sheet" style="margin: 100px"></input>	
+ 		<div class="loggedin"> Welcome <?php echo $_SESSION['username'];?>! <a href="logout.php">Log Out</a></div>
+		<img src="img/pic 08.png" class="salary" height="350" width="350" top>
 		
-		<form action="http://localhost/project/page%2001.php">
-		<input type="Submit" name="" value="Salary Management" style="margin: 100px"></input>
-		</form>
 		
-	
-	</div>
+
+			<div class="btn-group">
+				<button><a href="newuser.php">New user Registion</a></button>
+				<button><a href="newuser.php">View salary sheet</a></button>
+				<button><a href="newuser.php">Salary Management</a></button>
+			</div>
+
+		
  	</header>
  
  </body>
