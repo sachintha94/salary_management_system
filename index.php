@@ -24,14 +24,14 @@ if (!isset($_POST['password'] ) || strlen(trim($_POST['password'])) < 1){
   	    $username = mysqli_real_escape_string($connection, $_POST['username']);
   	    $password = mysqli_real_escape_string($connection, $_POST['password']);
   	  
-		$query = "SELECT * FROM LOGIN WHERE u_name = '$username' AND password = '$password'";
+		$query ="SELECT * FROM login WHERE u_name = '$username' AND password = '$password'";
 	
   	
 		$result_set = mysqli_query($connection, $query);
-			
-  	    if ($result_set){	
-			
 
+  	    if ($result_set)
+  	    {	
+		
   	    	//query succesful
   	      	if (mysqli_num_rows($result_set) == 1){
   	     	//valid user found
@@ -93,3 +93,4 @@ if (!isset($_POST['password'] ) || strlen(trim($_POST['password'])) < 1){
 
 </body>
 </html>
+<?php mysqli_close($connection); ?>

@@ -1,6 +1,4 @@
-*{
-	m0
-}
+
 body.index
 {
 	margin: 40px;
@@ -122,62 +120,89 @@ body.user{
 	font-weight: bold;
     font-size:40px;
     padding: 10px;
-	background:#f6f6f6; 
+    background:#f6f6f6;
 }
 
-
-
+}
 body header.appname{
 	float: left;
 	font-size: 50px;
 
 }
 body header .loggedin{
-	/*float: right;*/
+	float: right;
 	font-size: 20px;
     top: 5%;
 }
 
 .salary{
-    width: 600px;
-    height: 600px;
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 60%;
     border-radius: 40px;
 }
-.salarybox input[type="submit"]
-{
-    border: none;
-    outline: none;
-    width: 400px;
-    height: 100px;
-    background: #d12208;
-    color: #fff;
-    font-size: 20px;
-    border-radius: 20px;
+
+.button1{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 50px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+ position: absolute;
+ top: 20%;
+ left: 10%;
 
 
 }
-.salarybox input[type="submit" ]:hover
-{
-    cursor: pointer;
-    background: #ffc107;
-    color: #000;
+.button2{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 50px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+ position: absolute;
+ top: 50%;
+ left: 10%;
+
+
+}
+.button3{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 50px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+ position: absolute;
+ top: 80%;
+ left: 10%;
+
+
+}
+
+
 }
 /*new user*/
-body div.registionbox{
-    width: 600px;
-    height: 1200px;
+/*.registionbox{
+    width: 300px;
+    height: 1000px;
     background: #000;
-    color: #fff;
+    position: absolute; 
     top: 90%;
     left: 45%;
     position: absolute;
     transform: translate(-40%,-50%);
-box-sizing: border-box;
+    box-sizing: border-box;
     padding:0px 0px 0px;
-}
+}*/
 h1{
     margin: 0;
     padding: 10px 0px 40px;
@@ -188,13 +213,14 @@ h1{
 .registionbox p {
     margin: 0;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 3px;
     padding:0px 0px 0px 60px;
     text-align:left;
 }
 .registionbox input{
-    width: 65%;
+    display: block;
+    width: 50%;
     padding: 12px 30px 10px;
     margin-bottom: 20px;
     box-sizing: border-box;
@@ -219,34 +245,14 @@ h1{
     background: #ffc107;
     color: #000;
 }
+/*showsalary.php*/
 
-.btn-group button {
-  background-color: #4CAF50; /* Green background */
-  border: 1px solid green; /* Green border */
-  color: white; /* White text */
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  width: 50%; /* Set a width if needed */
-  display: block; /* Make the buttons appear below each other */
-  margin-top: 5em;
+table.masterlist{
+	width: 100%;
 }
-
-.btn-group button a {
-
-	color: white; /* White text */
-	padding: 10px 24px; /* Some padding */
-	cursor: pointer; /* Pointer/hand icon */
-	font-size: 1.5em;
-	text-decoration: none;
-	
-	
-  }
-
-.btn-group button:not(:last-child) {
-  border-bottom: none; /* Prevent double borders */
-}
-
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: #3e8e41;
-}
+table.masterlist th{ 
+	background: #aaa;
+ }
+ table.masterlist th, table.masterlist td {
+ 	padding: 10px;
+ }
