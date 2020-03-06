@@ -1,6 +1,4 @@
-*{
-	m0
-}
+
 body.index
 {
 	margin: 40px;
@@ -16,32 +14,31 @@ body.index
 }
 .error{
 		font-size: 20px;
-		color:#fb2525;}
+		color:#fb2525;
+}
 
 
 
-   .fog{
+.fog{
    	height: 500px;
    	width: 500px;
    	position: absolute;
    	top: 30%;
    	left: 200%;
-
 }
 
 .loginbox{
-	width: 420px;
-	height: 650px;
-	background: #000;
-	color: #fff;
-	top: 25%;
-	left: 10%;
-	position: absolute;
-box-sizing: border-box;
-padding: 110px 0px 0px;
-
-
+ width: 420px;
+ height: 650px;
+ background: #000;
+ color: #fff;
+ top: 25%;
+ left: 10%;
+ position: absolute;
+ box-sizing: border-box;
+ padding: 110px 0px 0px;
 }
+
 .avatar{
 	width: 200px;
 	height: 200px;
@@ -66,6 +63,7 @@ h1{
 	font-size: 30px;
 	letter-spacing: 3px;
 }
+
 .loginbox input{
 	width: 65%;
 	padding: 12px 20px;
@@ -75,9 +73,8 @@ h1{
 .loginbox label{
 	font-size: 30px;
 	text-align: center;
-
-
 }
+
 .loginbox select{
 	width: 65%;
 	height: 10px;
@@ -88,8 +85,7 @@ h1{
 	width: 60%;
 	height: 60%;
 }
-.loginbox input[type="text"], input[type="password"], input[type="Division"]
-{
+.loginbox input[type="text"], input[type="password"], input[type="Division"]{
 	border: none;
 	border-bottom: 1px solid #fff;
 	background: transparent;
@@ -99,8 +95,7 @@ h1{
 	color: #fff;
 	font-size: 16px;
 }
-.loginbox input[type="submit"]
-{
+.loginbox input[type="submit"]{
 	border: none;
 	outline: none;
 	height: 40px;
@@ -109,8 +104,7 @@ h1{
 	font-size: 18px;
 	border-radius: 20px;
 }
-.loginbox input[type="submit"]:hover
-{
+.loginbox input[type="submit"]:hover{
 	cursor: pointer;
 	background: #ffc107;
 	color: #000;
@@ -118,66 +112,79 @@ h1{
 }
 
 /* user page*/
-body.user{
+ body.user{
 	font-weight: bold;
     font-size:40px;
     padding: 10px;
-	background:#f6f6f6; 
+    background:#f6f6f6;
 }
-
-
-
-body header.appname{
+ body header.appname{
 	float: left;
-	font-size: 50px;
+	font-size: 10px;
 
 }
-body header .loggedin{
-	/*float: right;*/
+ body header .loggedin{
+	float: right;
 	font-size: 20px;
     top: 5%;
 }
 
 .salary{
-    width: 600px;
-    height: 600px;
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 60%;
     border-radius: 40px;
 }
-.salarybox input[type="submit"]
-{
-    border: none;
-    outline: none;
-    width: 400px;
-    height: 100px;
-    background: #d12208;
-    color: #fff;
-    font-size: 20px;
-    border-radius: 20px;
+
+.button1{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 50px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+ position: absolute;
+ top: 20%;
+ left: 10%;
 
 
 }
-.salarybox input[type="submit" ]:hover
-{
-    cursor: pointer;
-    background: #ffc107;
-    color: #000;
+.button2{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 50px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+ position: absolute;
+ top: 50%;
+ left: 10%;
+
+
 }
+.button3{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 50px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+ position: absolute;
+ top: 80%;
+ left: 10%;
+
+
+}
+
+
+
 /*new user*/
-body div.registionbox{
-    width: 600px;
-    height: 1200px;
-    background: #000;
-    color: #fff;
-    top: 90%;
-    left: 45%;
-    position: absolute;
-    transform: translate(-40%,-50%);
-box-sizing: border-box;
-    padding:0px 0px 0px;
-}
 h1{
     margin: 0;
     padding: 10px 0px 40px;
@@ -185,23 +192,60 @@ h1{
     font-size: 40px; 
     text-align: center;
 }
-.registionbox p {
+
+
+/*salarymang*/
+
+body header{
+	font-weight: bold;
+    font-size:40px;
+    padding: 30px;
+    background:#f6f6f6;
+}
+ .appname{
+	float: left;
+	font-size: 40px;
+	position: absolute;
+	top: 1.75%;
+
+}
+ .loggedin{
+	float: right;
+	font-size: 20px;
+    }
+
+ h1 span{
+ 	font-size: 20px;
+ 	font-weight: bold;
+
+ } 
+ form.userform label{
+ 	width: 60%;
+ } 
+ .registionbox{
+ 	position: absolute;
+ 	top: 20%;
+ 	left: 40%;
+ 	width: 500px;
+ 
+ }
+ .registionbox p {
     margin: 0;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 3px;
-    padding:0px 0px 0px 60px;
+   
     text-align:left;
 }
 .registionbox input{
-    width: 65%;
+    display: block;
+    width: 110%;
     padding: 12px 30px 10px;
     margin-bottom: 20px;
     box-sizing: border-box;
 
 }
-.registionbox input[type="submit"]
-{
+.registionbox input[type="submit"]{
     border: none;
     outline: none;
     width: 400px;
@@ -213,40 +257,8 @@ h1{
 
 
 }
-.registionbox input[type="submit"]:hover
-{
+.registionbox input[type="submit"]:hover{
     cursor: pointer;
     background: #ffc107;
     color: #000;
-}
-
-.btn-group button {
-  background-color: #4CAF50; /* Green background */
-  border: 1px solid green; /* Green border */
-  color: white; /* White text */
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  width: 50%; /* Set a width if needed */
-  display: block; /* Make the buttons appear below each other */
-  margin-top: 5em;
-}
-
-.btn-group button a {
-
-	color: white; /* White text */
-	padding: 10px 24px; /* Some padding */
-	cursor: pointer; /* Pointer/hand icon */
-	font-size: 1.5em;
-	text-decoration: none;
-	
-	
-  }
-
-.btn-group button:not(:last-child) {
-  border-bottom: none; /* Prevent double borders */
-}
-
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: #3e8e41;
-}
+} 

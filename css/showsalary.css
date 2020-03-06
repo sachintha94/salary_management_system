@@ -1,0 +1,42 @@
+
+ body header{
+	font-weight: bold;
+    font-size:40px;
+    padding: 30px;
+    background:#f6f6f6;
+}
+ .appname{
+	float: left;
+	font-size: 40px;
+	position: absolute;
+	top: 1.75%;
+
+}
+ .loggedin{
+	float: right;
+	font-size: 20px;
+    }
+ 
+ main {
+	width: 1000%;
+	margin: 10px;
+}
+table{
+	margin: 0%;
+	width: 1500px;
+	position: absolute;
+	top: 10%; 
+	left:10%;
+	border-collapse: separate;
+    text-align: center;
+    font-size: 30px;
+
+}
+table.masterline th{
+	background: #aaa;
+
+}
+table.masterline th, table.masterline td{
+	padding: 10px;
+	border-bottom:1px solid #aaa; 
+}
