@@ -8,7 +8,7 @@
 
     $salary_list = '';
     //getting the list of salary
-    $query ="SELECT * FROM salary WHERE paysheet_no";
+    $query ="SELECT * FROM salary WHERE delet = '0'";
     $allsalary =mysqli_query($connection, $query);
 
     if($allsalary) {
@@ -20,12 +20,12 @@
     		$salary_list .="<td>{$onesalary['staff_no']}</td>";
     		$salary_list .="<td>{$onesalary['b_salary']}</td>";
     		$salary_list .="<td>{$onesalary['loan']}</td>";
-    		$salary_list .="<td>{$onesalary['leave']}</td>";
+    		$salary_list .="<td>{$onesalary['leave_']}</td>";
     		$salary_list .="<td>{$onesalary['ot']}</td>";
     		$salary_list .="<td>{$onesalary['advance']}</td>";
     		$salary_list .="<td>{$onesalary['net_amount']}</td>";
     		$salary_list .="<td><a href = http://localhost/ssms/edit.php>Edit</a></td>";
-    		$salary_list .="<td><a href = http://localhost/ssms/deletesheet.php>Delete</a></td>";
+    		$salary_list .="<td><a href = deletesheet.php?delete={$onesalary['paysheet_no']}>Delete</a></td>";
 
     		$salary_list .="</tr>";
     	}

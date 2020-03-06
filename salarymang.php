@@ -16,7 +16,6 @@
 		//check if there are any error in the form
 	    if(empty($errors)){
 		  	 //save all details in to variables
-	  	     $paysheet_no = mysqli_real_escape_string($connection, $_POST['paysheet_no']);
 	  	     $name        = mysqli_real_escape_string($connection, $_POST['name']);
 	  	     $month       = mysqli_real_escape_string($connection, $_POST['month']);
 	  	     $staff_no    = mysqli_real_escape_string($connection, $_POST['staff_no']);
@@ -26,19 +25,26 @@
 	  	     $ot          = mysqli_real_escape_string($connection, $_POST['ot']);
 	  	     $advance     = mysqli_real_escape_string($connection, $_POST['advance']);
 	         $net_amount  = mysqli_real_escape_string($connection, $_POST['net_amount']);
-	  	     
+			   
+			 
+			 echo $name.$month.$staff_no;
 
 	  	      //Prepare database query
-	             $query = "INSERT INTO salary (paysheet_no, name, month, staff_no, b_salary, loan, leave,ot, advance, net_amount, delet) VALUES ('$paysheet_no', '$name', '$month', '$staff_no', '$b_salary', '$loan', '$leave', '$ot', '$advance', '$net_amount', '0')";
+			$query = "INSERT INTO salary (name,staff_no,b_salary,month,loan,leave_,ot,advance,net_amount,delet) 
+			VALUES ('$name','$staff_no','$b_salary','$month','$loan','$leave','$ot','$advance','$net_amount','0')";
+
+			
                      
 
-                     $result = mysqli_query($connection, $query);
-                     if ($result) {
-                     	//quer successful.... redirecting to users page
-                     	header('location: showsalary.php');
-                     } else {
-                     	 $errors[] = 'failed to add the new record.';
-                     }
+			$result = mysqli_query($connection, $query);
+
+			if ($result) {
+			//quer successful.... redirecting to users page
+				header('location: showsalary.php');
+			} 
+			else {
+				$errors[] = 'failed to add the new record.';
+			}
         }
     }
 ?>
@@ -58,8 +64,7 @@
  	    <div class="registionbox">
 		   
 	 		<form action="salarymang.php" method="post" class="userform">
-		 		<p>01).Paysheet No</p>
-				<input type="text" name="paysheet_no" placeholder="Enter Paysheet No" required>
+		 		
 
 				<p>02).Name</p>
 				<input type="text" name="name" placeholder="Enter Name" required>
@@ -68,7 +73,7 @@
 				<input type="text" name="month" placeholder="Enter Month" required>
 
 				<p>04).St.number</p>
-				<input type="text" name="staff_no" placeholder="Enter st.number" required>
+				<input type="text" name="staff_no" placeholder="Enter st.number" >
 
 				<p>05).Basic Salary</p>
 				<input type="text" name="b_salary" placeholder="Enter Basuc salary" required>

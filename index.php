@@ -96,4 +96,3 @@ if (!isset($_POST['password'] ) || strlen(trim($_POST['password'])) < 1){
 </body>
 </html>
 
-<?php mysqli_close($connection); ?>
