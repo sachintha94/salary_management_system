@@ -1,3 +1,4 @@
+
  <?php session_start();?>
 <?php require('inc/connection.php');?>
 <?php
@@ -31,4 +32,5 @@ if(!isset($_SESSION['staffno'])){header('location:index.php');}
  
  </body>
  </html>
+
  
